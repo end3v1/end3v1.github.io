@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#181926">
+  <meta name="description" content="Мой набор VS Code: настройки, 20 расширений и JetBrains Mono. Всё, чтобы быстро вернуть привычный редактор.">
+  <title>codekit — Мой набор VS Code</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./data.js" defer></script>
+  <script src="./core.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z M3 8l9 5 9-5 M12 13v8 M7.5 5.5l9 5"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h8m4 0h4M4 17h3m4 0h9"/><circle cx="14" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+    <symbol id="i-font" viewBox="0 0 24 24"><path d="m3 19 6-14 6 14 M5 14h8 M17 10h4 M19 10v9"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5 M4 16v4h16v-4"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14 M10 4H4v16h16v-6"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 6 6 6-6 6m9 0h7"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4 2c-1.5 1-1.5 1-1.5 3m0 3h.01"/></symbol>
+  </svg>
+
+  <aside class="sidebar" aria-label="Главная навигация">
+    <a class="brand" href="#overview" aria-label="codekit — на главную"><span class="brand-mark">&lt;/&gt;</span>codekit<span class="brand-dot">.</span></a>
+    <div class="workspace-label">ЛИЧНОЕ ПРОСТРАНСТВО</div>
+    <nav class="navigation">
+      <a class="nav-link active" href="#overview"><svg><use href="#i-grid"/></svg>Обзор</a>
+      <a class="nav-link" href="#extensions"><svg><use href="#i-box"/></svg>Расширения<span class="nav-count">20</span></a>
+      <a class="nav-link" href="#settings"><svg><use href="#i-sliders"/></svg>Настройки</a>
+      <a class="nav-link" href="#font"><svg><use href="#i-font"/></svg>Шрифт</a>
+    </nav>
+    <div class="sidebar-rule"></div>
+    <a class="nav-link guide-link" href="#transfer"><svg><use href="#i-help"/></svg>Как перенести</a>
+    <div class="sidebar-bottom">
+      <div class="palette" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <strong>Catppuccin Macchiato</strong><span>Всё на своих местах.</span>
+      <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Скачать VS Code <svg><use href="#i-external"/></svg></a>
+    </div>
+  </aside>
+
+  <div class="page">
+    <header class="topbar"><div class="breadcrumb">Мой набор <span>/</span> <strong>Visual Studio Code</strong></div><span class="status"><i></i>Готов к переносу</span></header>
+    <main id="main">
+      <section id="overview" class="hero section-anchor" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> МОЙ НАБОР VS CODE</div>
+          <h1 id="hero-title">Твой редактор.<br><em>Где угодно.</em></h1>
+          <p class="hero-description">Привычные настройки, нужные расширения и любимый шрифт. Собраны вместе, чтобы начать с того же места.</p>
+          <div class="hero-actions"><button class="button primary" data-action="profile"><svg><use href="#i-download"/></svg>Скачать профиль</button><a class="button secondary" href="#transfer">Как перенести <svg><use href="#i-arrow"/></svg></a></div>
+          <div class="hero-note"><svg><use href="#i-check"/></svg><span>.code-profile · настройки + <span data-selected-count>20</span> расширений</span></div>
+        </div>
+        <div class="editor-preview" aria-label="Предпросмотр настроек в палитре Macchiato">
+          <div class="editor-titlebar"><div class="window-dots"><i></i><i></i><i></i></div><span>my-workspace — Visual Studio Code</span><span class="window-menu">···</span></div>
+          <div class="editor-body"><div class="activity-bar"><svg class="activity-active"><use href="#i-copy"/></svg><svg><use href="#i-search"/></svg><svg><use href="#i-box"/></svg><svg class="activity-bottom"><use href="#i-sliders"/></svg></div>
+            <div class="editor-content"><div class="editor-tab"><span class="json-icon">{ }</span> settings.json <span>×</span></div>
+              <div class="code-preview" aria-hidden="true"><div><b>1</b><code>{</code></div><div><b>2</b><code>  <span class="key">"workbench.colorTheme"</span>:</code></div><div><b>3</b><code>    <span class="string">"Catppuccin Macchiato"</span>,</code></div><div><b>4</b><code>  <span class="key">"editor.fontFamily"</span>:</code></div><div><b>5</b><code>    <span class="string">"'JetBrains Mono', monospace"</span>,</code></div><div><b>6</b><code>  <span class="key">"editor.fontLigatures"</span>: <span class="boolean">true</span>,</code></div><div><b>7</b><code>  <span class="key">"editor.tabSize"</span>: <span class="number">2</span>,</code></div><div><b>8</b><code>  <span class="key">"editor.smoothScrolling"</span>: <span class="boolean">true</span></code></div><div><b>9</b><code>}<span class="caret"></span></code></div></div>
+            </div>
+          </div>
+          <div class="editor-status"><span>⑂ main <span class="editor-status-check">✓</span></span><span>UTF-8 <span>{ } JSON</span> <span>↔</span></span></div>
+          <div class="preview-tag"><i></i>Уже как дома</div>
+        </div>
+      </section>
+
+      <div class="stat-grid" aria-label="Состав набора">
+        <a href="#extensions" class="stat-card"><span class="stat-icon mauve"><svg><use href="#i-box"/></svg></span><div><strong>20 <span>расширений</span></strong><p>Для кода и комфортной работы</p></div><svg class="stat-arrow"><use href="#i-arrow"/></svg></a>
+        <a href="#settings" class="stat-card"><span class="stat-icon blue"><svg><use href="#i-sliders"/></svg></span><div><strong>Твои <span>настройки</span></strong><p>От курсора до форматирования</p></div><svg class="stat-arrow"><use href="#i-arrow"/></svg></a>
+        <a href="#font" class="stat-card"><span class="stat-icon peach"><svg><use href="#i-font"/></svg></span><div><strong>JetBrains <span>Mono</span></strong><p>С лигатурами, как ты любишь</p></div><svg class="stat-arrow"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <section id="extensions" class="section section-anchor" aria-labelledby="extensions-title">
+        <div class="section-heading"><div><div class="eyebrow muted">01 / ИНСТРУМЕНТЫ</div><h2 id="extensions-title">Всё нужное под рукой<span class="count-badge">20</span></h2><p>Твой список расширений. Выбери, что забрать с собой.</p></div><button class="button secondary compact" id="open-commands"><svg><use href="#i-terminal"/></svg>Команда установки</button></div>
+        <div class="extension-toolbar"><div class="filters" role="group" aria-label="Фильтры расширений"><button class="filter active" data-filter="all" aria-pressed="true">Все <span>20</span></button><button class="filter" data-filter="appearance" aria-pressed="false">Внешний вид</button><button class="filter" data-filter="python" aria-pressed="false">Python</button><button class="filter" data-filter="web" aria-pressed="false">Web</button><button class="filter" data-filter="tools" aria-pressed="false">Инструменты</button></div><label class="search"><svg><use href="#i-search"/></svg><input id="extension-search" type="search" placeholder="Найти расширение…" aria-label="Поиск расширений" autocomplete="off"></label></div>
+        <div class="selection-row"><label class="checkbox-label"><input type="checkbox" id="select-all" checked>Выбрать все</label><span id="result-count" role="status">Показано 20 из 20</span></div>
+        <div id="extension-grid" class="extension-grid"></div>
+        <div id="empty-state" class="empty-state" hidden><svg><use href="#i-search"/></svg><h3>Ничего не нашлось</h3><p>Попробуй другое название или сбрось фильтры.</p><button class="button secondary compact" id="reset-search">Сбросить фильтры</button></div>
+        <div class="selection-footer"><span><svg><use href="#i-check"/></svg>Выбрано <strong data-selected-count>20</strong> из 20 расширений</span><button class="text-button" data-action="profile">Скачать выбранное в профиле <svg><use href="#i-arrow"/></svg></button></div>
+        <noscript><p>Для выбора расширений и копирования команд включи JavaScript. <a href="./downloads/my-vscode.code-profile" download>Скачать полный профиль</a> можно и без него.</p></noscript>
+      </section>
+
+      <section id="settings" class="section section-anchor" aria-labelledby="settings-title">
+        <div class="section-heading"><div><div class="eyebrow muted">02 / ПРИВЫЧНЫЕ ДЕТАЛИ</div><h2 id="settings-title">Настроено под тебя</h2><p>Тот самый settings.json. Сохрани файл или скопируй целиком.</p></div><div class="heading-actions"><button class="button secondary compact" id="copy-settings"><svg><use href="#i-copy"/></svg>Копировать</button><a class="button secondary compact" href="./downloads/settings.json" download><svg><use href="#i-download"/></svg>JSON</a></div></div>
+        <div class="settings-layout"><div class="settings-summary"><div class="setting-feature"><span class="feature-dot mauve"></span><div><h3>Спокойный интерфейс</h3><p>Catppuccin Macchiato, Material Icons и никакой мини-карты.</p></div></div><div class="setting-feature"><span class="feature-dot blue"></span><div><h3>Плавность во всём</h3><p>Прокрутка редактора, списков и терминала. Анимация курсора.</p></div></div><div class="setting-feature"><span class="feature-dot peach"></span><div><h3>Аккуратный код</h3><p>Prettier по умолчанию, отступы в 2 пробела и связанные теги.</p></div></div><div class="setting-feature"><span class="feature-dot green"></span><div><h3>Только твои инструменты</h3><p>AI-функции выключены. Шрифт с лигатурами, высота строки — 22.</p></div></div><a href="#transfer" class="text-button">Куда вставить настройки <svg><use href="#i-arrow"/></svg></a></div>
+          <div class="settings-code"><div class="code-toolbar"><span><span class="json-icon">{ }</span> settings.json</span><span id="settings-lines">JSON</span></div><pre tabindex="0" aria-label="Полный текст settings.json"><code id="settings-source"></code></pre><div class="code-bottom"><i></i>Все настройки из твоего набора</div></div>
+        </div>
+      </section>
+
+      <section id="font" class="section section-anchor" aria-labelledby="font-title">
+        <div class="section-heading"><div><div class="eyebrow muted">03 / ТИПОГРАФИКА</div><h2 id="font-title">Код, на который приятно смотреть</h2><p>JetBrains Mono. Чёткие символы и лигатуры на своих местах.</p></div></div>
+        <div class="font-card"><div class="font-info"><span class="small-label">ТВОЙ ШРИФТ</span><h3>JetBrains Mono<span>Regular / Bold / Italic</span></h3><p>Установи шрифт в систему и перезапусти VS Code. Всё остальное уже есть в настройках.</p><a class="button primary" href="./downloads/jetbrains-mono.zip" download><svg><use href="#i-download"/></svg>Скачать шрифт</a><a class="font-official" href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener noreferrer">Сайт JetBrains <svg><use href="#i-external"/></svg></a></div>
+          <div class="font-playground"><div class="font-preview-toolbar"><span>ПОПРОБУЙ НАПЕЧАТАТЬ</span><label class="switch-label"><input type="checkbox" id="ligatures-toggle" checked><span class="switch" aria-hidden="true"></span>Лигатуры</label></div><label class="sr-only" for="font-input">Текст для проверки шрифта</label><textarea id="font-input" spellcheck="false" rows="3">const home = (editor) => {
+  return editor !== null;
+};</textarea><div class="font-glyphs" aria-hidden="true">!= <span>===</span> =&gt; <span>&lt;=</span> &gt;= <span>!==</span> ++</div><div class="font-caption"><span>Aa Bb Бб 012345</span><span>Лигатуры включены</span></div></div>
+        </div>
+      </section>
+
+      <section id="transfer" class="section section-anchor" aria-labelledby="transfer-title">
+        <div class="section-heading"><div><div class="eyebrow muted">04 / БЫСТРЫЙ СТАРТ</div><h2 id="transfer-title">Новый компьютер. Знакомый VS Code.</h2><p>Три шага — и можно возвращаться к коду.</p></div><div class="os-tabs" role="group" aria-label="Операционная система"><button data-os="windows" class="active" aria-pressed="true">Windows</button><button data-os="macos" aria-pressed="false">macOS</button><button data-os="linux" aria-pressed="false">Linux</button></div></div>
+        <div class="steps"><article class="step"><span class="step-number">01</span><svg class="step-icon"><use href="#i-download"/></svg><h3>Забери профиль</h3><p>Один файл с настройками и выбранными расширениями. Установка расширений потребует интернета.</p><button class="text-button" data-action="profile">Скачать .code-profile <svg><use href="#i-arrow"/></svg></button></article><article class="step"><span class="step-number">02</span><svg class="step-icon"><use href="#i-sliders"/></svg><h3>Импортируй в VS Code</h3><p>Открой <strong>File → Preferences → Profiles</strong>. В меню рядом с New Profile выбери <strong>Import Profile…</strong>, укажи файл и нажми Create.</p><span class="step-tip">В русской версии: «Профили» → «Импортировать профиль».</span></article><article class="step"><span class="step-number">03</span><svg class="step-icon"><use href="#i-font"/></svg><h3>Установи шрифт</h3><p id="font-install-instruction">Распакуй архив шрифта. Выдели все .ttf, нажми правой кнопкой → «Установить» (в Windows 11 — «Показать дополнительные параметры»). Перезапусти VS Code.</p><a class="text-button" href="./downloads/jetbrains-mono.zip" download>Скачать шрифт <svg><use href="#i-arrow"/></svg></a></article></div>
+        <details class="manual-guide"><summary><span><svg><use href="#i-terminal"/></svg>Хочу перенести вручную</span><span class="details-plus">+</span></summary><div class="manual-content"><p>В VS Code нажми <kbd id="palette-shortcut">Ctrl + Shift + P</kbd> и найди <strong>Preferences: Open User Settings (JSON)</strong> / «Параметры: Открыть параметры пользователя (JSON)». Скопируй нужные настройки из файла. Полная замена содержимого заменит текущие пользовательские настройки — сохрани их копию, если они нужны.</p><div class="manual-actions"><button class="button secondary compact" id="copy-settings-manual"><svg><use href="#i-copy"/></svg>Настройки</button><button class="button secondary compact" id="open-commands-manual"><svg><use href="#i-terminal"/></svg>Расширения</button></div><p class="muted-text">Команды устанавливают расширения в текущий профиль VS Code. Python, Go и другие среды выполнения устанавливаются отдельно.</p></div></details>
+        <div class="bundle-banner"><div class="bundle-icon"><svg><use href="#i-box"/></svg></div><div><h3>Пусть весь набор будет под рукой</h3><p>Полный профиль, settings.json, все 20 расширений в списке, команды и шрифт.</p></div><a class="button secondary" href="./downloads/vscode-setup.zip" download><svg><use href="#i-download"/></svg>Скачать всё .zip</a></div>
+      </section>
+      <footer><a class="footer-brand" href="#overview">codekit<span>.</span></a><span>Меньше настройки. Больше кода.</span><a href="https://code.visualstudio.com/docs/configure/profiles" target="_blank" rel="noopener noreferrer">О профилях VS Code <svg><use href="#i-external"/></svg></a></footer>
+    </main>
+  </div>
+
+  <dialog id="commands-dialog" aria-labelledby="commands-title"><div class="dialog-heading"><div><div class="eyebrow muted">УСТАНОВКА РАСШИРЕНИЙ</div><h2 id="commands-title">Одна команда — весь выбор</h2></div><button class="close-button" id="close-dialog" aria-label="Закрыть">×</button></div><p class="dialog-description">Открой терминал и вставь команду. Она установит <strong data-selected-count>20</strong> выбранных расширений в текущий профиль.</p><label class="shell-label" for="shell-select">Терминал</label><select id="shell-select"><option value="powershell">Windows · PowerShell</option><option value="cmd">Windows · CMD</option><option value="bash">macOS / Linux · Bash / Zsh</option></select><pre class="command-code" tabindex="0"><code id="install-command"></code></pre><p class="dialog-tip">Если <code>code</code> не найден, перезапусти терминал. На macOS: в палитре команд VS Code выполни <strong>Shell Command: Install 'code' command in PATH</strong>.</p><p id="command-feedback" class="command-feedback" role="status" aria-live="polite"></p><div class="dialog-actions"><button class="button secondary" id="download-command"><svg><use href="#i-download"/></svg>Скачать команды</button><button class="button primary" id="copy-command"><svg><use href="#i-copy"/></svg>Копировать</button></div></dialog>
+  <dialog id="copy-dialog" aria-labelledby="copy-title"><div class="dialog-heading"><h2 id="copy-title">Скопируй текст вручную</h2><button class="close-button" id="close-copy-dialog" aria-label="Закрыть">×</button></div><p>Браузер не разрешил доступ к буферу. Выдели текст и скопируй его.</p><textarea id="copy-fallback" readonly rows="10" aria-label="Текст для копирования"></textarea></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
