@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker-russian",
+    "aaron-bond.better-comments",
+    "ms-python.black-formatter",
+    "Catppuccin.catppuccin-vsc",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "batisteo.vscode-django",
+    "hediet.vscode-drawio",
+    "usernamehw.errorlens",
+    "golang.Go",
+    "ritwickdey.LiveServer",
+    "PKief.material-icon-theme",
+    "esbenp.prettier-vscode",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.vscode-python-envs",
+    "KevinRose.vsc-python-indent",
+    "qwtel.sqlite-viewer",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

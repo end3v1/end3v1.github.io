@@ -1,0 +1,29 @@
+МОЙ НАБОР VS CODE
+
+1. Импортируй my-vscode.code-profile через меню профилей VS Code:
+   File → Preferences → Profiles → меню рядом с New Profile → Import Profile…
+   На macOS: Code → Settings → Profiles.
+   Выбери файл, проверь состав и нажми Create.
+2. Установи файлы .ttf из папки fonts, затем перезапусти VS Code.
+   Windows: выделить .ttf → правой кнопкой → Установить.
+   Windows 11: сначала «Показать дополнительные параметры».
+   macOS: открыть .ttf в приложении «Шрифты», нажать «Установить».
+   Linux: скопировать .ttf в ~/.local/share/fonts, выполнить fc-cache -f.
+
+Без профиля:
+— В палитре команд открой Preferences: Open User Settings (JSON).
+— Перенеси нужные ключи из settings.json. Сохрани старые настройки перед заменой.
+— Открой подходящий install-extensions.* в редакторе, скопируй команду
+  в терминал и выполни её. Это обходит ограничения запуска .ps1 в Windows.
+— Команда code должна быть доступна в PATH. На macOS добавь её через
+  Shell Command: Install 'code' command in PATH в палитре VS Code.
+
+Список содержит 20 расширений со скриншотов.
+Это список для установки из Marketplace, а не копии расширений (.vsix).
+Для установки нужен интернет. Версии не закреплены: устанавливаются
+доступные совместимые версии. Python, Go и другие среды ставятся отдельно.
+extensions.json — рекомендации для папки .vscode проекта, не установщик.
+
+Шрифт: JetBrains Mono от JetBrains, SIL Open Font License 1.1.
+https://www.jetbrains.com/lp/mono/
+https://code.visualstudio.com/docs/configure/profiles

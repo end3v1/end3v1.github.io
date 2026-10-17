@@ -1,0 +1,22 @@
+@echo off
+code ^
+  --install-extension streetsidesoftware.code-spell-checker-russian ^
+  --install-extension aaron-bond.better-comments ^
+  --install-extension ms-python.black-formatter ^
+  --install-extension Catppuccin.catppuccin-vsc ^
+  --install-extension streetsidesoftware.code-spell-checker ^
+  --install-extension naumovs.color-highlight ^
+  --install-extension batisteo.vscode-django ^
+  --install-extension hediet.vscode-drawio ^
+  --install-extension usernamehw.errorlens ^
+  --install-extension golang.Go ^
+  --install-extension ritwickdey.LiveServer ^
+  --install-extension PKief.material-icon-theme ^
+  --install-extension esbenp.prettier-vscode ^
+  --install-extension ms-python.vscode-pylance ^
+  --install-extension ms-python.python ^
+  --install-extension ms-python.debugpy ^
+  --install-extension ms-python.vscode-python-envs ^
+  --install-extension KevinRose.vsc-python-indent ^
+  --install-extension qwtel.sqlite-viewer ^
+  --install-extension bradlc.vscode-tailwindcss
